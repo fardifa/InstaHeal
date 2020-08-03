@@ -1,2 +1,2 @@
 # InstaHeal
-e-health site
+e-health site for online medicine delivery and health blog
