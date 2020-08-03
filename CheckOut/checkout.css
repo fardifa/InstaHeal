@@ -1,0 +1,60 @@
+#top{
+    background-color: darkslategray;
+    height: 100px;
+
+}
+#topp{
+    background-color: rgb(96, 202, 197);
+    height: 80px;
+    
+}
+a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+}
+input.search{
+    font-size: 15px;
+    height: 40px;
+    width: 300px;
+    margin-left: 22%;
+    border-radius: 500px;
+    border-color: black;
+}
+
+#shipping h1{
+    margin-left: 17%;
+    margin-top: 3%;
+    font-size: 50px;
+}
+
+#cc{
+    margin-left: 23%;
+    font-family: arialMJ;
+}
+
+
+#hd{
+    margin-left: 23%;
+    font-family: arialMJ;
+
+}
+
+
+#f{ 
+    display: inline-block;
+    width: 30%;
+    margin-left: 30%;
+    font-family: arialMJ;
+}
+
+#payment{
+       font-size: 35px;
+       color: black;
+       margin-left: 20%;
+       font-family: arialMJ;
+}
