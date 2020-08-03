@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    {%load staticfiles%}
+       <link rel="stylesheet" href="{%static 'stylee.css' %}">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Zarif Ahmed</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+
+
+
+<body>
+    <div id="top">
+        <a href="{% url 'home' %}"
+            style="text-decoration:none;color: white;font-weight: bold;display: inline-block;margin-top: 2.8%;margin-left:0px;font-size: 2em;font-family: Arial, Helvetica, sans-serif;">
+            InstaHeal</a>
+        <img style="margin-top: 10px;float: left;"
+            src="{% static 'instaheall.png' %}">
+        {%if user.is_authenticated%}
+        <a style="font-size: 20px;margin-left: 700px;color:white" href="javascript:{document.getElementById('logout').submit()}"> Logout</a>
+         <a style="font-size: 20px;margin-left: 20px; color:white" href=""> {{user.first_name}}</a>
+         <img style="display:inline-block;width:20px;height:20px;" src="{%static 'userav.PNG' %}">
+         <form style="color:white" id="logout" method="POST" action="{% url 'logout' %}">
+            {%csrf_token%}
+        <input type="hidden">
+          </form>
+
+             {%else%}
+
+             <a style="font-size: 20px;margin-left: 700px;color:white" href="{%url 'login'%}"> Login</a>
+             <a style="font-size: 20px;margin-left: 30px;color:white" href="{%url 'signup'%}"> Sign up</a>
+             {%endif%}
+  </div>
+    <div id="topp">
+
+
+        <div class="dropdown">
+  <button style="font-size:28px;" class="dropbtn">Products </button>
+  <div class="dropdown-content">
+    <a style="margin-left:0px;" href="{%url 'medicine'%}">Medicine</a>
+    <a style="margin-left:0px;" href="{%url 'medicine'%}">Child care</a>
+    <a style="margin-left:0px;"href="{%url 'medicine'%}">Cosmetics</a>
+  </div>
+</div>
+
+
+
+
+        <a style="color:white" href="dnd.com">Health Guide</a>
+        <a style="color:white" href="huihs.com">Contact a Specialist</a>
+        <a style="color:white" href="oasj.com">About Us</a>
+    </div>
+</body>
+    </header>
+
+
+{%block content%}
+{%endblock%}

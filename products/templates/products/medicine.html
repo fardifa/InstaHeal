@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{%block content%}}
+
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+
+       <div class="row">
+        {%for medicine in medicine.all%}
+
+        <div class="col-md-3">
+          <div class="card mb-4 shadow ">
+          <img style="height:200px;cursor: pointer;" class="img-fluid" src="{{ medicine.image.url }}" onclick="window.location='{% url 'login' %}';"/>
+            <div class="card-body">
+                <p class="card-text">{{medicine.summary}}</p>
+                <p class="card-text">Price: {{medicine.price}} BDT/pack</p>
+                <p id="cart" style="cursor: pointer; hover: grey;" onclick="window.location='{% url 'cart' %}';"> Add to cart </p>
+
+
+           </div>
+
+          </div>
+
+        </div>
+              {%endfor%}
+
+
+      </div>
+    </div>
+  </div>
+
+
+{%endblock%}

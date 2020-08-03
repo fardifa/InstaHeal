@@ -1,0 +1,41 @@
+{%extends 'base.html' %}
+
+
+{%block content%}
+
+ {%load staticfiles%}
+
+
+<form id="f" method="POST" action="{%url 'signup'%}">
+    {%csrf_token%}
+
+                <h1 style="color: rgb(27, 2, 66); text-align: center;">Sign Up</h1>
+
+                <label for="name">Name</label><br>
+                <input style="width: 95%;" type="text" id="name" name="name"><br><br>
+
+                <label for="phone">Phone</label><br>
+                <input style="width: 95%;" type="text" id="phone" name="phone"><br><br>
+
+                <label for="email">Email</label><br>
+                <input style="width: 95%;" type="text" id="email" name="email"><br><br>
+
+                <label for="pass">Password</label><br>
+                <input style="width: 95%;" type="password" id="pass" name="pass"><br><br>
+
+                <label for="cpass">Confirm Pasword</label><br>
+                <input style="width: 95%;" type="password" id="cpass" name="cpass"><br><br><br>
+                <button style="margin-left: 60%;background-color: lightblue;font-weight: bold;width: 150px;height: 50px;font-size:20px " type="submit">Submit</button>
+</form>
+    <div style="background-color:rgb(252, 144, 104);border-radius: 500px;  float: right; margin-top: 30px;margin-right:20%;">
+        <p id="signupwriting">
+            For your <br>better service
+        </p>
+        </div>
+{% if error %}
+{{error}}
+{% endif %}
+    </body>
+</html>
+
+{%endblock%}
