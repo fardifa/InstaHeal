@@ -1,0 +1,245 @@
+#top{
+	 background-color: darkslategray;
+    height: 100px;
+
+}
+
+#topp{
+    background-color: rgb(96, 202, 197);
+    height: 80px;
+    
+}
+
+a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+}
+input.search{
+    font-size: 15px;
+    height: 40px;
+    width: 300px;
+    margin-left: 22%;
+    border-radius: 500px;
+    border-color: black;
+}
+
+#blogpost h1{
+    margin-left: 38%;
+    font-family: Times New Roman;
+}
+
+/*
+#write{
+    font-size: 16px;
+    margin-left: 6%;
+    margin-right: 70%;
+    margin-top:0%;
+    background-color: white;
+}
+
+#write a{
+    color:black;
+}
+
+
+
+
+
+
+
+.p1-box{
+     float: left;
+    width: 33%;
+    width: 300px;
+    height: 220px;
+    border:1px solid #FFF;
+    margin-top: 40px;
+    margin-left: 15%;
+
+    position:relative;
+    /*background image */
+   /* background-image: url('coldd.png');
+
+    /* if i want background to be a sub portion
+    of the border */
+
+  /*  background-repeat: no-repeat;
+    background-position: 40px 40px;
+    background-position: center top;
+}
+
+#corona{
+    float: left;
+    width: 33%;
+    font-size: 16px;
+    margin-left: 32%;
+    margin-right: 40%;
+    margin-top:0%;
+    background-color: white;
+}
+
+
+#corona a{
+    color:black;
+
+}
+
+.p2-box{
+     float: left;
+    width: 33%;
+    width: 280px;
+    height: 220px;
+    border:1px solid #FFF;
+    margin-top: 40px;
+    margin-left: 40%;
+
+    position:relative;
+    /*background image */
+  /*  background-image: url('common_cold.png');
+
+    /* if i want background to be a sub portion
+    of the border */
+
+ /*   background-repeat: no-repeat;
+    background-position: 40px 40px;
+    background-position: center top; 
+}
+
+*/
+
+
+
+.p-box{ /* pashapashi shob */
+    float:left;
+    width: 30%;
+    border:1px solid #FFF;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 350px;
+
+}
+
+.p-box a{
+    color: black;
+    margin-top: 0%;
+
+}
+
+.p-box img{
+    margin-left: 30%;
+}
+
+
+
+.p1-box{ /* pashapashi shob */
+    float:left;
+    width: 30%;
+    border:1px solid #FFF;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 350px;
+    margin-top: 5%;
+
+}
+
+.p1-box a{
+    color: black;
+    margin-top: 0%;
+
+}
+
+.p1-box img{
+    margin-left: 30%;
+}
+
+/*
+
+.block{ /* pashapashi shob */
+  /*  float:left;
+    width: 33.3%;
+    border:1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
