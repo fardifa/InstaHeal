@@ -1,4 +1,4 @@
-{%extends 'base.html' %}
+{%extends 'store/base.html' %}
 
 
 {%block content%}
@@ -28,7 +28,7 @@
         </p>
         </div>
        {% if error %}
-{{error}}
+<div style="background-color:red; width:18%; border: 3px; border-color: black;margin-left: 15%;color: white;" > {{error}}</div>
 {% endif %}
 
     </body>

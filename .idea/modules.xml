@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/InstaHeal.iml" filepath="$PROJECT_DIR$/.idea/InstaHeal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/django_ecommerce_mod5.iml" filepath="$PROJECT_DIR$/.idea/django_ecommerce_mod5.iml" />
     </modules>
   </component>
 </project>
