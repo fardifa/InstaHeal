@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Zarif Ahmed</title>
+    <title>Project</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
@@ -53,7 +53,7 @@
 <body>
     <div id="top">
         <a href="{% url 'home' %}"
-            style="text-decoration:none;color: white;font-weight: bold;display: inline-block;margin-top: 2.8%;margin-left:0px;font-size: 2em;font-family: Arial, Helvetica, sans-serif;">
+            style="text-decoration:none;color: white;font-weight: bold;display: inline-block;margin-top: 2.8%;margin-left:0px;font-size: 2em;font-family: sans-serif;">
             InstaHeal</a>
         <img style="margin-top: 10px;float: left;"
             src="{% static 'images/instaheall.png' %}">
@@ -75,8 +75,8 @@
              <a style="font-size: 20px;margin-left: 700px;color:white" href="{%url 'login'%}"> Login</a>
              <a style="font-size: 20px;margin-left: 30px;color:white" href="{%url 'signup'%}"> Sign up</a>
              {%endif%}
-       
-      
+
+
   </div>
     <div id="topp">
 
@@ -93,8 +93,8 @@
 
 
 
-         <a style="color:white" href="{#}">Health Guide</a>
-        <a style="color:white" href="huihs.com">Contact a Specialist</a>
+<a style="color:white" href="{% url 'allblogs' %}">Health Guide</a>
+<a style="color:white" href="{% url 'specialist' %}">Contact a Specialist</a>
         <a style="color:white" href="oasj.com">About Us</a>
     </div>
 </body>

@@ -1,0 +1,45 @@
+{%extends 'store/base.html' %}
+
+
+{%block content%}
+
+ {%load staticfiles%}
+
+
+ <main role="main">
+ <div class="container">
+ <h1 class="text-center pt-3">{{ blog.title }}</h1>
+
+ <!-- <a href="{% url 'detail' blog.id %}"><h3>{{blog.title}}</h3></a> -->
+ <p class="text-center pt-3">{{blog.pub_date}} </p>
+ <br />
+ <img class="mx-auto d-block" src="{{blog.image.url}}" height=500 width=700>
+
+
+ <br />
+
+ <br/>
+ <p>{{blog.body}} </p>
+
+ </div>
+ </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {%endblock%}

@@ -58,7 +58,7 @@
 			document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
 		}
 		console.log('Cart:', cart)
-	
+
 	</script>
 
 </head>
@@ -68,7 +68,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div>
 			<a href="{% url 'home' %}"
-				style="text-decoration:none;color: white;font-weight: bold;display: inline-block;margin-top: 16%;margin-left:0px;font-size: 2em;font-family: Arial, Helvetica, sans-serif;">
+				style="text-decoration:none;color: white;font-weight: bold;display: inline-block;margin-top: 16%;margin-left:0px;font-size: 2em;font-family:  sans-serif;">
 				InstaHeal</a>
 			<img style="margin-top: 10px;float: left;"
 				src="{% static 'images/instaheall.png' %}">
@@ -85,7 +85,7 @@
              <a style="margin-left:600px; color:white" href="{%url 'login'%}"> Login</a>
              <a style="margin-left: 30px;color:white" href="{%url 'signup'%}"> Sign up</a>
              {%endif%}
-	  
+
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -93,15 +93,15 @@
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-auto">
 	      <li class="nav-item active">
-	        
+
 	      </li>
-	 
+
 	    </ul>
 
 
 	    <div class="form-inline my-2 my-lg-0">
 
-	     	
+
 	     	<a href="{% url 'cart' %}">
 	    		<img  id="cart-icon" src="{% static 'images/cart.png' %}">
 	    	</a>
@@ -126,8 +126,8 @@
 
 
 
-         <a style="color:white" href="{#}">Health Guide</a>
-        <a style="color:white" href="huihs.com">Contact a Specialist</a>
+<a style="color:white" href="{% url 'allblogs' %}">Health Guide</a>
+<a style="color:white" href="{% url 'specialist' %}">Contact a Specialist</a>
         <a style="color:white" href="oasj.com">About Us</a>
     </div>
 

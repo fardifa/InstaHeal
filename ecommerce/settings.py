@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES ={
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'instahealdb2',
+        'NAME': 'instahealdb',
         'USER':'postgres',
         'PASSWORD':'rooftop',
         'HOST':'localhost',

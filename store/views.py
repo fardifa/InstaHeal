@@ -2,11 +2,11 @@ from django.shortcuts import render
 from django.http import JsonResponse
 import json
 import datetime
-from .models import * 
+from .models import *
 from .utils import cookieCart, cartData, guestOrder
 from django.db import connection
 from django.db.models import Q
-
+from django.shortcuts import render,get_object_or_404
 
 
 
@@ -111,4 +111,16 @@ def search(request):
 		#with connection.cursor() as cursor:
 		#	cursor.execute("Select * from store_product where store_product.name = %s", [query])
 		#results = Product.objects.raw("Select * from store_product where store_product.name = %s", [query])
-	return render(request, 'store/search.html', {'query' : query , 'results':results}) 
+	return render(request, 'store/search.html', {'query' : query , 'results':results})
+
+def allblogs(request):
+    bloglists = Bloglist.objects
+    return render(request,'store/allblogs.html',{'bloglists':bloglists})
+
+def detail(request,blog_id):
+    detailblog = get_object_or_404(Bloglist,pk=blog_id)
+    return render(request,'store/detail.html',{'blog':detailblog})
+
+def specialist(request):
+    specialist = Specialist.objects
+    return render(request,'store/specialist.html',{'specialist':specialist})

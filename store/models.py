@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from datetime import datetime
 # Create your models here.
 
 class Customer(models.Model):
@@ -81,3 +81,17 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return self.address
+
+
+
+class Bloglist(models.Model):
+    image = models.ImageField(null=True, blank=True)
+    title = models.CharField(max_length=50)
+    pub_date = models.DateTimeField(default=datetime.now(), blank=True)
+    body = models.TextField(default="start writing here")
+
+class Specialist(models.Model):
+    name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='images/')
+    speciality = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50)
