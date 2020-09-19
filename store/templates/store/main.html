@@ -118,8 +118,8 @@
   <button style="font-size:28px;" class="dropbtn">Products </button>
   <div class="dropdown-content">
     <a style="margin-left:0px;" href="{% url 'store' %}">Medicine</a>
-    <a style="margin-left:0px;" href="{#}">Child care</a>
-    <a style="margin-left:0px;"href="{#}">Cosmetics</a>
+   <a style="margin-left:0px;" href="{% url 'babystore' %}">Child care</a>
+    <a style="margin-left:0px;"href="{% url 'cosmetics' %}">Cosmetics</a>
   </div>
 </div>
 
@@ -128,7 +128,8 @@
 
 <a style="color:white" href="{% url 'allblogs' %}">Health Guide</a>
 <a style="color:white" href="{% url 'specialist' %}">Contact a Specialist</a>
-        <a style="color:white" href="oasj.com">About Us</a>
+		<a style="color:white" href="{% url 'hvideo' %}">Exercise Videos</a>
+
     </div>
 
      <div class="container">

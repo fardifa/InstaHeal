@@ -1,0 +1,34 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class = "Container" >
+	{% if query %}
+	<h3>{% with results.count as total_results %}
+		Found {{total_results}} result(s)
+
+		{% endwith %}
+
+	<div class="row">
+		{% for product in results %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{{product.imageURL}}">
+			<div class="box-element product">
+				<h6><strong>{{product.name}}</strong></h6>
+				<hr>
+
+				<button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+
+				<!--<a class="btn btn-outline-success" href="#">View</a>-->
+				<h4 style="display: inline-block; float: right"><strong>BDT {{product.price}}</strong></h4>
+
+			</div>
+		</div>
+		{% empty %}
+		<h3>There is no item</h3>
+		{% endfor %}
+	{% else %}
+	<h3>Please Search Again</h3>
+	{% endif %}
+	</div>
+</div>
+{% endblock content %}

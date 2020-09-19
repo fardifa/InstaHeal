@@ -7,11 +7,24 @@ from .utils import cookieCart, cartData, guestOrder
 from django.db import connection
 from django.db.models import Q
 from django.shortcuts import render,get_object_or_404
+import random
 
 
 
 def home(request):
 	return render(request,'store/home.html')
+
+def hvideo2(request):
+	return render(request,'store/vlist.html')
+
+def video2(request):
+	return render(request,'store/video.html')
+
+def video3(request):
+	return render(request,'store/yvideo.html')
+
+def video4(request):
+	return render(request,'store/cvideo.html')
 
 def success(request):
 	return render(request,'store/success.html')
@@ -24,6 +37,28 @@ def store(request):
 	items = data['items']
 
 	products = Product.objects.all()
+	context = {'products':products, 'cartItems':cartItems}
+	return render(request, 'store/store.html', context)
+
+def babystore(request):
+	data = cartData(request)
+
+	cartItems = data['cartItems']
+	order = data['order']
+	items = data['items']
+
+	products = babyProduct.objects.all()
+	context = {'products':products, 'cartItems':cartItems}
+	return render(request, 'store/store.html', context)
+
+def medical_cosmetics(request):
+	data = cartData(request)
+
+	cartItems = data['cartItems']
+	order = data['order']
+	items = data['items']
+
+	products = cosmetics.objects.all()
 	context = {'products':products, 'cartItems':cartItems}
 	return render(request, 'store/store.html', context)
 
@@ -74,7 +109,7 @@ def updateItem(request):
 	return JsonResponse('Item was added', safe=False)
 
 def processOrder(request):
-	transaction_id = datetime.datetime.now().timestamp()
+	transaction_id = random.randint(0,90000)
 	data = json.loads(request.body)
 
 	if request.user.is_authenticated:
@@ -108,10 +143,33 @@ def search(request):
 	if request.method == "GET" :
 		query = request.GET.get("search")
 		results = Product.objects.filter(Q(name__icontains = query))
-		#with connection.cursor() as cursor:
-		#	cursor.execute("Select * from store_product where store_product.name = %s", [query])
-		#results = Product.objects.raw("Select * from store_product where store_product.name = %s", [query])
+	#	with connection.cursor() as cursor:
+	#		cursor.execute("Select * from store_product where store_product.name = %s", [query])
+	#	results = Product.objects.raw("Select * from store_product where store_product.name = %s", [query])
 	return render(request, 'store/search.html', {'query' : query , 'results':results})
+
+def search(request):
+	query = None
+	results = []
+	if request.method == "GET" :
+		query = request.GET.get("search")
+		results = babyProduct.objects.filter(Q(name__icontains = query))
+	#	with connection.cursor() as cursor:
+	#		cursor.execute("Select * from store_product where store_product.name = %s", [query])
+	#	results = Product.objects.raw("Select * from store_product where store_product.name = %s", [query])
+	return render(request, 'store/searchbaby.html', {'query' : query , 'results':results})
+
+def search(request):
+	query = None
+	results = []
+	if request.method == "GET" :
+		query = request.GET.get("search")
+		results = cosmetics.objects.filter(Q(name__icontains = query))
+	#	with connection.cursor() as cursor:
+	#		cursor.execute("Select * from store_product where store_product.name = %s", [query])
+	#	results = Product.objects.raw("Select * from store_product where store_product.name = %s", [query])
+	return render(request, 'store/searchbaby.html', {'query' : query , 'results':results})
+
 
 def allblogs(request):
     bloglists = Bloglist.objects

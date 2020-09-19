@@ -1,0 +1,54 @@
+{%extends 'store/base.html'%}
+
+{%block content%}
+{%load staticfiles%}
+
+
+
+
+<div class="row pt-3" style="margin-top:5%;margin-left:10px;">
+    <div class="col-2" onclick="window.location='{% url 'video' %}';" style="cursor: pointer;">
+        <img class="img-fluid" src="{% static 'images/heart.jpg' %}">
+
+
+    </div>
+
+    <div class="col-6" onclick="window.location='{% url 'video' %}';" style="cursor: pointer;">
+        <h1>Learn exercise to improve heart health</h1>
+
+
+    </div>
+</div>
+
+<div class="row pt-3" style="margin-top:5%;margin-left:10px;">
+    <div class="col-2" onclick="window.location='{% url 'yvideo' %}';" style="cursor: pointer;">
+        <img class="img-fluid" src="{% static 'images/Yoga.jpg' %}">
+
+
+    </div>
+
+    <div class="col-6" onclick="window.location='{% url 'yvideo' %}';" style="cursor: pointer;">
+        <h1>Yoga for relaxation</h1>
+
+
+    </div>
+</div>
+
+<div class="row pt-3" style="margin-top:5%;margin-left:10px;">
+    <div class="col-2" onclick="window.location='{% url 'cvideo' %}';" style="cursor: pointer;">
+        <img class="img-fluid" src="{% static 'images/Cali.jpg' %}">
+
+
+    </div>
+
+    <div class="col-6" onclick="window.location='{% url 'cvideo' %}';" style="cursor: pointer;">
+        <h1>The Perfect Beginner Calisthenics Workout!</h1>
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}
